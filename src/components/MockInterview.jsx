@@ -730,7 +730,7 @@ const MockInterview = ({ job, onBack, theme = "light" }) => {
                                   }`}
                                 >
                                   <span className="font-medium">Status:</span>{" "}
-                                  {result.status.description}
+                                  {`Executed`}
                                 </div>
                               )}
                             </div>
