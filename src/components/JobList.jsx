@@ -65,7 +65,7 @@ const JobList = ({ onSelectJob, selectedJob, theme }) => {
       setLoading(true)
       setIsSearching(true)
       
-      const response = await axios.get("http://localhost:5000/job-list", {
+      const response = await axios.get("https://ai-based-interview-questions-app.onrender.com/job-list", {
         params: {
           query: searchQuery,
           location: location,

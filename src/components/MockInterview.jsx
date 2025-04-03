@@ -57,7 +57,7 @@ const MockInterview = ({ job, onBack, theme = "light" }) => {
       try {
         setLoading(true);
         const response = await axios.post(
-          "http://localhost:5000/generate-question",
+          "https://ai-based-interview-questions-app.onrender.com/generate-question",
           {
             jobTitle: job.title,
             jobDescription: job.description,
@@ -187,7 +187,7 @@ const MockInterview = ({ job, onBack, theme = "light" }) => {
     try {
       setExecutionResult(null);
 
-      const response = await axios.post("http://localhost:5000/code-execute", {
+      const response = await axios.post("https://ai-based-interview-questions-app.onrender.com/code-execute", {
         language: selectedLanguage,
         code: code,
         stdin: customInput,
@@ -215,7 +215,7 @@ const MockInterview = ({ job, onBack, theme = "light" }) => {
       setTestCaseResults(null);
 
       const response = await axios.post(
-        "http://localhost:5000/run-test-cases",
+        "https://ai-based-interview-questions-app.onrender.com/run-test-cases",
         {
           language: selectedLanguage,
           code: code,
@@ -255,7 +255,7 @@ const MockInterview = ({ job, onBack, theme = "light" }) => {
       await handleRunTestCases();
 
       // Then get code review
-      const response = await axios.post("http://localhost:5000/code-review", {
+      const response = await axios.post("https://ai-based-interview-questions-app.onrender.com/code-review", {
         language: selectedLanguage,
         code: code,
         questionDescription: question.description,
