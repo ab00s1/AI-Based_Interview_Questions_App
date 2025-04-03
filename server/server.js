@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 const ai = new GoogleGenAI({ apiKey: process.env.GENAI_API_KEY });
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://ai-based-interview-questions-app-1.onrender.com',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
